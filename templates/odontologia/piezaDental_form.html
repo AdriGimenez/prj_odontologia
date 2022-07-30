@@ -1,0 +1,13 @@
+{% extends "baseForm.html" %}
+{% load static %}
+{% block titulo_pagina %} Agregar Pieza Dental {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Agregar Pieza Dental {% endblock %}
+
+{% block principal %}
+    <div class="row">
+        <div class="col">
+            {{ form.nombre.label }} {{ form.nombre }}<br>
+        </div>
+    </div>
+{% endblock %}

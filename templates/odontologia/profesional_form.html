@@ -1,0 +1,23 @@
+{% extends "baseForm.html" %}
+{% load static %}
+{% block titulo_pagina %} Agregar Profesional {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Agregar Profesional {% endblock %}
+
+{% block principal %}
+    <div class="row">
+        <div class="col">
+            {{ form.profesional.label }} {{ form.profesional }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form.matricula.label }} {{ form.matricula }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form.especialidad.label }} {{ form.especialidad }} <br>
+        </div>
+    </div>
+{% endblock %}

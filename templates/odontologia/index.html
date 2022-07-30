@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block titulo_pagina %} Pagina de Inicio {% endblock %}
+{% load static %}
+
+{% block principal %}
+    <h1 style="text-align: center">Clinica Odontologica</h1>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3" style="text-align: center; padding-top: 20px">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/paciente.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Paciente</h4>
+                        <a href="{% url "personas" %}"><img class="icono" src="{% static 'img/icnLista.png' %}"></a> <strong>MOSTRAR</strong>
+                        <a href="{% url "nueva_persona" %}"><img class="icono" src="{% static 'img/icnAgregar.png' %}"></a> <strong>AGREGAR</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" style="text-align: center; padding-top: 20px">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/localidad.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Localidad</h4>
+                        <a href="{% url "localidades" %}"><img class="icono" src="{% static 'img/icnLista.png' %}"></a> <strong>MOSTRAR</strong>
+                        <a href="{% url "nueva_localidad" %}"><img class="icono" src="{% static 'img/icnAgregar.png' %}"></a> <strong>AGREGAR</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" style="text-align: center; padding-top: 20px">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/obraSocial.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Obra Social</h4>
+                        <a href="{% url "obrasSociales" %}"><img class="icono" src="{% static 'img/icnLista.png' %}"></a> <strong>MOSTRAR</strong>
+                        <a href="{% url "nueva_obraSocial" %}"><img class="icono" src="{% static 'img/icnAgregar.png' %}"></a> <strong>AGREGAR</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" style="text-align: center; padding-top: 20px">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/piezaDental.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Pieza Dental</h4>
+                        <a href="{% url "piezasDentales" %}"><img class="icono" src="{% static 'img/icnLista.png' %}"></a> <strong>MOSTRAR</strong>
+                        <a href="{% url "nueva_piezaDental" %}"><img class="icono" src="{% static 'img/icnAgregar.png' %}"></a> <strong>AGREGAR</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" style="text-align: center; padding-top: 20px">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/prestacion.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Prestacion</h4>
+                        <a href="{% url "prestaciones" %}"><img class="icono" src="{% static 'img/icnLista.png' %}"></a> <strong>MOSTRAR</strong>
+                        <a href="{% url "nueva_prestacion" %}"><img class="icono" src="{% static 'img/icnAgregar.png' %}"></a> <strong>AGREGAR</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" style="text-align: center; padding-top: 20px">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/profesional.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Profesional</h4>
+                        <a href="{% url "profesionales" %}"><img class="icono" src="{% static 'img/icnLista.png' %}"></a> <strong>MOSTRAR</strong>
+                        <a href="{% url "nuevo_profesional" %}"><img class="icono" src="{% static 'img/icnAgregar.png' %}"></a> <strong>AGREGAR</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" style="text-align: center; padding-top: 20px">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/turno.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Turno</h4>
+                        <a href="{% url "turnos" %}"><img class="icono" src="{% static 'img/icnLista.png' %}"></a> <strong>MOSTRAR</strong>
+                        <a href="{% url "nuevo_turno" %}"><img class="icono" src="{% static 'img/icnAgregar.png' %}"></a> <strong>AGREGAR</strong>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3" style="text-align: center; padding-top: 20px">
+                <div class="card" style="width: 18rem;">
+                    <img src="{% static 'img/usuario.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h4 class="card-title">Usuario</h4>
+                        <a href="{% url "usuarios" %}"><img class="icono" src="{% static 'img/icnLista.png' %}"></a> <strong>MOSTRAR</strong>
+                        <a href="{% url "nuevo_usuario" %}"><img class="icono" src="{% static 'img/icnAgregar.png' %}"></a> <strong>AGREGAR</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block al_inicio %}{% endblock %}

@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo_pagina %} Listado de Obras Sociales {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Listado de Obras Sociales {% endblock %}
+
+{% block principal %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre Obra Social</th>
+                <th>Direccion</th>
+                <th>Disponible</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        {% for obraSocial in obrasSociales %}
+            <tr>
+                <td>{{ obraSocial.nombreOS }}</td>
+                <td>{{ obraSocial.direccion }}</td>
+                <td>{{ obrasocial.disponible }}</td>
+                <td><a href="{% url "modificar_obraSocial" obraSocial.nombreOS %}"><img class="icono" src="{% static 'img/icnModificar.png' %}"></a></td>
+                <td><a href="{% url "eliminar_obraSocial" obraSocial.nombreOS %}"><img class="icono" src="{% static 'img/icnEliminar.png' %}"></a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

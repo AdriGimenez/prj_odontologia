@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo_pagina %} Listado de Piezas Dentales {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Listado de Piezas Dentales {% endblock %}
+
+{% block principal %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        {% for piezaDental in piezasDentales %}
+        <tr>
+            <td>{{ piezaDental.nombre }}</td>
+            <td><a href="{% url "modificar_piezaDental" piezaDental.nombre %}"><img class="icono" src="{% static 'img/icnModificar.png' %}"></a></td>
+            <td><a href="{% url "eliminar_piezaDental" piezaDental.nombre %}"><img class="icono" src="{% static 'img/icnEliminar.png' %}"></a></td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

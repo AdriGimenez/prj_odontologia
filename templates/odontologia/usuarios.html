@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo_pagina %} Listado de Localidades {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Listado de Localidades {% endblock %}
+
+{% block principal %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Datos</th>
+            <th>Nombre</th>
+            <th>Contrasenia</th>
+            <th>Modificar</th>
+            <th>Eliminar</th>
+        </tr>
+        </thead>
+        {% for usuario in usuarios %}
+            <tr>
+                <td>{{ usuario.persona }}</td>
+                <td>{{ usuario.nombre }}</td>
+                <td>{{ usuario.contrasenia}}</td>
+                <td><a href="{% url "modificar_usuario" usuario.nombre %}"><img class="icono" src="{% static 'img/icnModificar.png' %}"></a></td>
+                <td><a href="{% url "eliminar_usuario" usuario.nombre %}"><img class="icono" src="{% static 'img/icnEliminar.png' %}"></a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

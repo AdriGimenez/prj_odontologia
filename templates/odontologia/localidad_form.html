@@ -1,0 +1,18 @@
+{% extends "baseForm.html" %}
+{% load static %}
+{% block titulo_pagina %} Agregar Localidad {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Agregar Localidad {% endblock %}
+
+{% block principal %}
+    <div class="row">
+        <div class="col">
+            {{ form.nombre.label }} {{ form.nombre }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form.cp.label }} {{ form.cp }}<br>
+        </div>
+    </div>
+{% endblock %}

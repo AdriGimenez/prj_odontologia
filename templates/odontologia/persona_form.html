@@ -1,0 +1,53 @@
+{% extends "baseForm.html" %}
+{% load static %}
+{% block titulo_pagina %} Agregar Persona {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Agregar Persona {% endblock %}
+
+{% block principal %}
+    <div class="row">
+        <div class="col-xs-2">
+            {{ form.nombre.label }} {{ form.nombre }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            {{ form.apellido.label }} {{ form.apellido }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            {{ form.num_doc.label }} {{ form.num_doc }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            {{ form.num_cuit.label }} {{ form.num_cuit }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            {{ form.fecha_nac.label }} {{ form.fecha_nac }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            {{ form.telefono.label }} {{ form.telefono }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            {{ form.email.label }} {{ form.email }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-2">
+            {{ form.direccion.label }} {{ form.direccion }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="row-xs-2">
+            {{ form.localidad.label }} {{ form.localidad }} <br>
+        </div>
+    </div>
+{% endblock %}

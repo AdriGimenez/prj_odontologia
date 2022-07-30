@@ -1,0 +1,23 @@
+{% extends "baseForm.html" %}
+{% load static %}
+{% block titulo_pagina %} Agregar Obra Social {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Agregar Obra Social {% endblock %}
+
+{% block principal %}
+    <div class="row">
+        <div class="col">
+            {{ form.nombreOS.label }} {{ form.nombreOS }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form.direccion.label }} {{ form.direccion }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form.disponible.label }} {{ form.disponible }} <br>
+        </div>
+    </div>
+{% endblock %}

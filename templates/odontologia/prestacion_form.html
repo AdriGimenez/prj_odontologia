@@ -1,0 +1,23 @@
+{% extends "baseForm.html" %}
+{% load static %}
+{% block titulo_pagina %} Agregar Prestacion {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Agregar Prestacion {% endblock %}
+
+{% block principal %}
+    <div class="row">
+        <div class="col">
+            {{ form.nombre.label }} {{ form.nombre }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form.descripcion.label }} {{ form.descripcion }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form.tratamiento.label }} {{ form.tratamiento }}
+        </div>
+    </div>
+{% endblock %}

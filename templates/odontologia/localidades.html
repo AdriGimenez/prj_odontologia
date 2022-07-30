@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo_pagina %} Listado de Localidades {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Listado de Localidades {% endblock %}
+
+{% block principal %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>CP</th>
+            <th>Modificar</th>
+            <th>Eliminar</th>
+        </tr>
+        </thead>
+        {% for localidad in localidades %}
+            <tr>
+                <td>{{ localidad.nombre }}</td>
+                <td>{{ localidad.cp }}</td>
+                <td><a href="{% url "modificar_localidad" localidad.id %}"><img class="icono" src="{% static 'img/icnModificar.png' %}"></a></td>
+                <td><a href="{% url "eliminar_localidad" localidad.id %}"><img class="icono" src="{% static 'img/icnEliminar.png' %}"></a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

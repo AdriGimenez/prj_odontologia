@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo_pagina %} Listado de Profesionales {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Listado de Profesionales {% endblock %}
+
+{% block principal %}
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Datos</th>
+                <th>Matricula</th>
+                <th>Especialidad</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+        </thead>
+        {% for profesional in profesionales %}
+            <tr>
+                <td>{{ profesional.profesional }}</td>
+                <td>{{ profesional.matricula }}</td>
+                <td>{{ profesional.especialidad}}</td>
+                <td><a href="{% url "modificar_profesional" profesional.matricula %}"><img class="icono" src="{% static 'img/icnModificar.png' %}"></a></td>
+                <td><a href="{% url "eliminar_profesional" profesional.matricula %}"><img class="icono" src="{% static 'img/icnEliminar.png' %}"></a></td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

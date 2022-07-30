@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% load static %}
+{% block titulo_pagina %} Listado de Localidades {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Listado de Localidades {% endblock %}
+
+{% block principal %}
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Datos Paciente</th>
+            <th>Datos Medico</th>
+            <th>Fecha</th>
+{#          <th>Estado</th>#}
+            <th>Modificar</th>
+            <th>Eliminar</th>
+        </tr>
+        </thead>
+        {% for turno in turnos %}
+            <tr>
+                <td>{{ turno.paciente }}</td>
+                <td>{{ turno.medico }}</td>
+                <td>{{ turno.fecha }}</td>
+{#              <td>{{ turno.estado }}</td>#}
+                <td><a href="{% url "modificar_profesional" profesional.matricula %}"><img class="icono" src="{% static 'img/icnModificar.png' %}"></a></td>
+                <td><a href="{% url "eliminar_profesional" profesional.matricula %}"><img class="icono" src="{% static 'img/icnEliminar.png' %}"></a></td>
+           </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

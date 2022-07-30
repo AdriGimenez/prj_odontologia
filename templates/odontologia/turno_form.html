@@ -1,0 +1,28 @@
+{% extends "baseForm.html" %}
+{% load static %}
+{% block titulo_pagina %} Agregar Turno {% endblock %}
+{% block titulo_principal %} Consultorio Odontologico {% endblock %}
+{% block titulo_secundario %} Agregar Turno {% endblock %}
+
+{% block principal %}
+    <div class="row">
+        <div class="col">
+            {{ form.paciente.label }} {{ form.paciente }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form.medico.label }} {{ form.medico }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form.fecha.label }} {{ form.fecha }}
+        </div>
+    </div>
+{#  <div class="row">#}
+{#      <div class="col">#}
+{#          {{ form.estado.label }} {{ form.estado }} <br>#}
+{#      </div>#}
+{#  </div>#}
+{% endblock %}
